@@ -34,6 +34,8 @@ namespace ClientReservasi_017
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'wCFReservasiDataSet.Pemesanan' table. You can move, or remove it, as needed.
+            this.pemesananTableAdapter.Fill(this.wCFReservasiDataSet.Pemesanan);
 
         }
 
@@ -102,7 +104,7 @@ namespace ClientReservasi_017
             Clear();
         }
 
-        private void dtPemesanan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dtPemesanan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxID.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[0].Value);
             textBoxNama.Text = Convert.ToString(dtPemesanan.Rows[e.RowIndex].Cells[3].Value);
